@@ -1,15 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>{{ page_title }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  {{ content_for_header }}
-  <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}">
-</head>
-<body>
-  {% section 'header' %}
-  {{ content_for_layout }}
-  {% section 'footer' %}
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page_title }} | Our Quirky Selves</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Crafty trinkets, journals, and handmade curiosities for your quirky self.">
+    <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}">
+    <script src="{{ 'theme.js' | asset_url }}" defer></script>
+    {{ content_for_header }}
+  </head>
+  <body>
+    {% section 'landing-home' %}
+    {{ content_for_layout }}
+  </body>
 </html>
