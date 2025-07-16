@@ -1,0 +1,17 @@
+{% layout 'theme' %}
+<section class="inner-template">
+  <div class="product-container">
+    <h1 class="product-title">{{ product.title }}</h1>
+    <div class="product-content">
+      <img src="{{ product.featured_image | img_url: 'large' }}" alt="{{ product.title }}" />
+      <div class="product-details">
+        <div class="product-price">{{ product.price | money }}</div>
+        <form method="post" action="/cart/add">
+          <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+          <button type="submit" class="btn-buy">Add to Cart</button>
+        </form>
+        <div class="product-description">{{ product.description }}</div>
+      </div>
+    </div>
+  </div>
+</section>

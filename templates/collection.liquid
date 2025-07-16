@@ -1,0 +1,17 @@
+{% layout 'theme' %}
+<section class="inner-template">
+  <div class="collection-container">
+    <h1 class="collection-title">{{ collection.title }}</h1>
+    <div class="product-grid">
+      {% for product in collection.products %}
+        <div class="product-card">
+          <a href="{{ product.url }}">
+            <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+            <div class="card-title">{{ product.title }}</div>
+            <div class="card-price">{{ product.price | money }}</div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

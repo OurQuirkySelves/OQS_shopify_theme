@@ -1,0 +1,79 @@
+<style>
+  body {
+    margin: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #fdf6ff;
+    color: #3d1c5e;
+    overflow: hidden;
+  }
+
+  .landing-container {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(135deg, #a259ff, #f787ff);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: #ffd9ff;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .social-icons a {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+  }
+
+  .social-icons a:hover {
+    transform: scale(1.1);
+  }
+
+  .social-icons img {
+    width: 30px;
+    height: 30px;
+  }
+</style>
+
+<div class="landing-container">
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/pages/about">About</a>
+    <a href="/collections/all">Shop</a>
+    <a href="/pages/gallery">Gallery</a>
+  </div>
+  <div class="social-icons">
+    <a href="https://facebook.com" target="_blank"><img src="{{ 'icon-facebook.svg' | asset_url }}" alt="Facebook"></a>
+    <a href="https://instagram.com" target="_blank"><img src="{{ 'icon-instagram.svg' | asset_url }}" alt="Instagram"></a>
+    <a href="https://youtube.com" target="_blank"><img src="{{ 'icon-youtube.svg' | asset_url }}" alt="YouTube"></a>
+    <a href="https://m.me/yourpage" target="_blank"><img src="{{ 'icon-messenger.svg' | asset_url }}" alt="Messenger"></a>
+  </div>
+</div>
