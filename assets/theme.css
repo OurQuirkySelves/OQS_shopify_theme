@@ -59,9 +59,15 @@
 
 /* Add to your theme.css for debugging */
 .main-header {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  z-index: 99999 !important;
   border: 3px solid red !important;
   background: yellow !important;
   min-height: 100px !important;
+  display: block !important;
 }
 
 .site-title {
